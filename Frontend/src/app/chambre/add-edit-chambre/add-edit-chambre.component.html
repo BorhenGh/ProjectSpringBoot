@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Add Room</h1>
+
+<form class="example-form"[formGroup]="Reactiveform" (ngSubmit)=" getReservFormData()" >
+  <mat-form-field class="example-full-width">
+    <mat-label>Room Id </mat-label>
+    <input matInput  placeholder="" value=""  formControlName="idchambre" >
+    
+  </mat-form-field> 
+  <mat-form-field class="example-full-width">
+    <mat-label>Number of beds </mat-label>
+    <input matInput  placeholder=""   formControlName="nombreDelit" >
+    
+  </mat-form-field> 
+ 
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Fermer</button>
+        <button  type="submit" mat-raised-button color="primary" cdkFocusInitial  *ngIf="editmode==true">Modifier</button>
+      <button  type="submit" mat-raised-button color="primary" cdkFocusInitial *ngIf="editmode==false">Enregistrer</button>
+        
+      </div>
+      
+     
+      
+
+  
+  
+    
+  </form>
+

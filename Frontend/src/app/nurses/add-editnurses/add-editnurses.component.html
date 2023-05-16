@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>Add Doctor</h1>
+
+<form class="example-form"[formGroup]="Reactiveform" (ngSubmit)=" getReservFormData()" >
+  <mat-form-field class="example-full-width">
+    <mat-label>Nurse Id </mat-label>
+    <input matInput  placeholder="" value=""  formControlName="idnurse" >
+    
+  </mat-form-field> 
+  <mat-form-field class="example-full-width">
+    <mat-label>Nurse Name </mat-label>
+    <input matInput  placeholder=""   formControlName="nomNurse" >
+    
+  </mat-form-field> 
+  <mat-form-field class="example-full-width">
+    <mat-label>age </mat-label>
+    <input matInput  placeholder=""   formControlName="age" >
+  </mat-form-field> 
+   
+  <mat-form-field class="example-full-width">
+    <mat-label>telephone </mat-label>
+    <input matInput  placeholder=""   formControlName="telephone" >
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Recruitment Date</mat-label>
+    <input matInput [matDatepicker]="picker"  formControlName="dateRecrutement" >
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Salaire </mat-label>
+    <input matInput  placeholder=""   formControlName="salaire" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nom universite </mat-label>
+    <input matInput  placeholder=""   formControlName="nomUniversite" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Grade of the Nurse</mat-label>
+    <select matNativeControl required formControlName="nurseGrade">
+      <option value=" JUNIOR"> JUNIOR</option>
+      <option value="SENIOR">SENIOR</option>
+      <option value="CHIEF">CHIEF</option>
+     
+     
+    </select>
+  </mat-form-field>
+  
+   
+    
+      
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Fermer</button>
+        <button  type="submit" mat-raised-button color="primary" cdkFocusInitial  *ngIf="editmode==true">Modifier</button>
+      <button  type="submit" mat-raised-button color="primary" cdkFocusInitial *ngIf="editmode==false">Enregistrer</button>
+        
+      </div>
+      
+     
+      
+
+  
+  
+    
+  </form>
+

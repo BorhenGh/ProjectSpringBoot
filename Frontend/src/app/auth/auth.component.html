@@ -1,0 +1,36 @@
+<div
+  class="bg-image"
+  style="
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div style="width: 48%" class="content">
+    <mat-tab-group [(selectedIndex)]="selectedIndex" dynamicHeight>
+      <mat-tab label="Login">
+        <div class="header">
+       
+          
+        </div>
+
+        <app-login></app-login>
+      </mat-tab>
+
+      <mat-tab label="Register">
+        <div class="header">
+     
+        </div>
+
+        <app-register
+          (didSuccessfullyRegistred)="accountDidCreated()"
+        ></app-register>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+
+  
+  
+</div>

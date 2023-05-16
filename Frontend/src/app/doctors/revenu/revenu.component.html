@@ -1,0 +1,20 @@
+<div class="dialog-container">
+  <h1>Revenu Doctor</h1>
+  <form class="form-container">
+    <div class="form-field">
+      <label for="idmedecin">Doctor Id</label>
+      <input type="text" id="idmedecin"  value="{{ idMedecin}}" disabled >
+    </div>
+    <div class="form-field">
+      <label for="date_embauche">Start Date</label>
+      <input type="date" id="date_embauche" [(ngModel)]="startDate" name="startDate" required>
+    </div>
+    <div class="form-field">
+      <label for="date_embauche">End Date</label>
+      <input type="date" id="date_embauche" [(ngModel)]="endDate" name="endDate" required>
+    </div>
+  </form>
+  <p>Revenu : {{ revenu }}</p>
+  <div class="dialog-actions">
+    <button type="button" class="btn-submit" (click)="getRevenu()" >Obtenir le revenu</button>
+  </div>

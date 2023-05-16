@@ -1,0 +1,43 @@
+<div class="dialog-container">
+<h1>Add Appointment</h1>
+<form class="form-container" [formGroup]="Reactiveform" (ngSubmit)="getReservFormData()">
+  <div class="form-field">
+    <label for="idmedecin">Appointment Id</label>
+    <input type="text" id="idmedecin" formControlName="idrendezvous" >
+  </div>
+  <div class="form-field">
+    <label for="date_embauche">Appointment date</label>
+    <input type="date" id="date_embauche" formControlName="dateRdv" required>
+  </div>
+  <div class="form-field">
+    <label for="nomUniversite">Remark Doctor</label>
+    <input type="text" id="nomUniversite" formControlName="remarque" required>
+  </div>
+  <div class="form-field">
+    <label for="gradeMedecin" class="label-select">Patient Name</label>
+    <select id="gradeMedecin" formControlName="patients" required class="select-box">
+      <option *ngFor="let patient of ListPatients" value={{patient.idpatient}}> {{ patient.nomPatient }}</option>
+    </select>
+  </div>
+  
+  <div class="form-field">
+    <label for="gradeMedecin" class="label-select">Doctor Name</label>
+    <select id="gradeMedecin" formControlName="medecin" required class="select-box">
+      <option *ngFor="let medecinn of ListDoct" value={{medecinn.idmedecin}}> {{ medecinn.nom }}</option>
+    </select>
+  </div>
+  <div class="dialog-actions">
+    <button type="button" class="btn-cancel" (click)="dialogref.close()">Fermer</button>
+    <button type="submit" class="btn-submit" *ngIf="editmode == true">Modifier</button>
+    <button type="submit" class="btn-submit" *ngIf="editmode == false">Enregistrer</button>
+  </div>
+</form>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+
+<app-navbar></app-navbar>
+<nav class="sidebar">
+    <div class="logo d-flex justify-content-between">
+    <a href="index.html"><img src="assets/images/GSlogo.jpg" alt=""></a>
+    <div class="sidebar_close_icon d-lg-none">
+    <i class="ti-close"></i>
+    </div>
+    </div>
+    <ul id="sidebar_menu">
+    <li class="side_menu_title">
+    <span>AL RAHMA MANAGEMENT</span>
+    </li>
+    <li class="mm-active custom-class">
+        <a class="has-arrow" href="#" aria-expanded="false">
+            <img src="assets/images/menu-icon/1.svg" alt="">
+            <span>Dashboard</span>
+        </a>
+        <ul>
+            <li><a class="active" routerLink="/doctors">Doctors</a></li>
+            <li><a class="active" routerLink="/chambre">Rooms</a></li>
+            <li><a class="active" routerLink="/nurses">Nurses</a></li>
+            <li><a class="active" routerLink="/patient">Patients</a></li>
+            <li><a class="active" routerLink="/pharmacien">Pharmacusts</a></li>
+            <li><a class="active" routerLink="/appointment">Appointment</a></li>
+            <li><a class="active" routerLink="/doc">Patient Document</a></li>
+        </ul>
+    </li>
+    
+
+   
+    </ul>
+    </nav>
+    
+    
+    <section class="main_content dashboard_part">
+    
+    <div class="container-fluid g-0">
+    <div class="row">
+    <div class="col-lg-12 p-0">
+    <div class="header_iner d-flex justify-content-between align-items-center">
+    <div class="sidebar_icon d-lg-none">
+    <i class="ti-menu"></i>
+    </div>
+    <div class="serach_field-area">
+    <div class="search_inner">
+  
+    </div>
+    </div>
+    <div class="header_right d-flex justify-content-between align-items-center">
+    <div class="header_notification_warp d-flex align-items-center">
+    
+    
+    </div>
+    <div class="profile_info">
+    <img src="assets/images/client_img.png" alt="#">
+    <div class="profile_info_iner">
+    
+    <a routerLink="">Log Out <i class="ti-shift-left"></i></a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="main_content_iner ">
+    <div class="container-fluid p-0">
+    <div class="row justify-content-center">
+    <div class="col-lg-12">
+    <div class="single_element">
+    <div class="quick_activity">
+    <div class="row">
+    <div class="col-12">
+    <div class="quick_activity_wrap">
+    <div class="single_quick_activity d-flex">
+    <div class="icon">
+    <img src="assets/images/icon/man.svg" alt="">
+    </div>
+    <div class="count_content">
+    <h3><span class="counter">{{nombreDoctor}}</span> </h3>
+    <p>Doctors</p>
+    </div>
+    </div>
+    <div class="single_quick_activity d-flex">
+    <div class="icon">
+    <img src="assets/images/icon/cap.svg" alt="">
+    </div>
+    <div class="count_content">
+    <h3><span class="counter">{{nombreNurses}}</span> </h3>
+    <p>Nurses</p>
+    </div>
+    </div>
+    <div class="single_quick_activity d-flex">
+    <div class="icon">
+    <img src="assets/images/icon/wheel.svg" alt="">
+    </div>
+    <div class="count_content">
+    <h3><span class="counter">{{nombrePatients}}</span> </h3>
+    <p>Patients</p>
+    </div></div>
+    <div class="single_quick_activity d-flex">
+        <div class="icon">
+        <img src="assets/images/icon/x.png" alt="">
+        </div>
+        <div class="count_content">
+        <h3><span class="counter">{{nombreRoom}}</span> </h3>
+        <p>Chambres</p>
+        </div>
+        
+    </div>
+    <div class="single_quick_activity d-flex">
+        <div class="icon">
+        <img src="assets/images/icon/y.png" alt="">
+        </div>
+        <div class="count_content">
+        <h3><span class="counter">{{nombreRendezvous}}</span> </h3>
+        <p>Appointment</p>
+        </div></div>
+        
+    
+    <div class="single_quick_activity d-flex">
+    <div class="icon">
+    <img src="assets/images/icon/pharma.svg" alt="">
+    </div>
+    <div class="count_content">
+    <h3><span class="counter">{{nombrepharm}}</span> </h3>
+    <p>Pharmacusts</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+   
+    

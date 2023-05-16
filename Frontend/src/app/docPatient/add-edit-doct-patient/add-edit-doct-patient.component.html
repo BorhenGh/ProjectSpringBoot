@@ -1,0 +1,54 @@
+
+<div class="dialog-container">
+  <h1>Add Document</h1>
+
+  <form class="form-container" [formGroup]="Reactiveform" (ngSubmit)="getReservFormData()">
+    <div class="form-field">
+      <label>Document Id</label>
+      <input type="number" id="idmedecin" formControlName="idDocuments" >
+    </div>
+
+    <div class="form-field">
+      <label for="nom">Type of illiness</label>
+      <input type="text" id="nom" formControlName="type_maladie" required>
+    </div>
+
+    <div class="form-field">
+      <label for="prixconsultation">Start Date</label>
+      <input type="date" id="prixconsultation" formControlName="startdate" required>
+    </div>
+
+    <div class="form-field">
+      <label for="prixconsultation">state of illness</label>
+      <input type="text" id="prixconsultation" formControlName="etat_maladie" required>
+    </div>
+    <div class="form-field">
+      <label for="specialite">Patient Name</label>
+      <select id="specialite" formControlName="patients" required>
+        <option *ngFor="let patient of listPatients" value={{patient.idpatient}}> {{patient.nomPatient}}</option>
+       
+      </select>
+    </div>
+    <div class="form-field">
+        <label for="gradeMedecin">Appointment Date</label>
+        <select id="gradeMedecin" formControlName="rendezVous" required>
+          <option *ngFor="let rendezvous of listRendezvous" value={{rendezvous.idrendezvous}}>{{rendezvous.dateRdv}}</option>
+        
+        </select>
+      </div>
+    <div class="form-field">
+      <label for="gradeMedecin">Doctor Name</label>
+      <select id="gradeMedecin"  formControlName="medecin" required>
+        <option *ngFor="let medecinn of listMedecin" value={{medecinn.idmedecin}}> {{ medecinn.nom }}</option>
+       
+      </select>
+    </div>
+   
+
+    <div class="dialog-actions">
+      <button type="button" class="btn-cancel" (click)="dialogref.close()">Fermer</button>
+      <button type="submit" class="btn-submit" *ngIf="editmode == true">Modifier</button>
+      <button type="submit" class="btn-submit" *ngIf="editmode == false">Enregistrer</button>
+    </div>
+  </form>
+</div>

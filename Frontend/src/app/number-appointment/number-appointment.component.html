@@ -1,0 +1,24 @@
+<div class="doctor-page">
+    <div class="header">
+      <h2>Doctor Information</h2>
+    </div>
+    <div class="content">
+      <div class="info">
+        <div class="label">Doctor ID :</div>
+        <div class="value">{{ idMedecin }}</div>
+      </div>
+      <div class="info">
+        <div class="label">Doctor Name :</div>
+        <div class="value">{{ listclients?.nom }}</div>
+      </div>
+      <div class="info">
+        <div class="label">Number of Appointment :</div>
+        <div class="value">{{ nombreR }}</div>
+      </div>
+      <button class="refresh-btn" (click)="getCountAppointment()">Show</button>
+      <button type="button" class="btn-cancel" (click)="dialogRef.close()">Fermer</button>
+    </div>
+    <div class="alert" *ngIf="nombreR > 10">
+      Le nombre de rendez-vous dépasse 10 !
+    </div>
+  </div>

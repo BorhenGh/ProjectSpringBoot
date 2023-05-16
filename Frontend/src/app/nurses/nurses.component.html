@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <app-navbar></app-navbar>
+      </div>
+      <div class="col-md-9" >
+        <div class="example-button-row" >
+          
+          <br><br>
+          <button (click)="add()" id="clbbb" mat-raised-button color="primary">Ajouter</button>
+        </div> <br><br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id Nurse</th>
+                    <th>Nurse Name</th>
+                    <th>Age</th>
+                    <th>Mobile phone</th>
+                    <th>Recruitment date</th>
+                    <th>Salary</th>
+                    <th>University name</th>
+                    <th>Grade Nurse</th>
+              
+                   
+           
+           
+         
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr  *ngFor="let dataitem of Listnurses  ">
+                    <td >{{dataitem.idnurse}}</td>
+                    <td>{{dataitem.nomNurse}}</td>
+                    <td>{{dataitem.age}}</td>
+                    <td>{{dataitem.telephone}}</td>
+                    <td>{{dataitem.dateRecrutement|date}}</td>
+                    <td>{{dataitem.salaire}}</td>
+                    <td>{{dataitem.nomUniversite}}</td>
+                    <td>{{dataitem.nurseGrade}}</td>
+                   
+        
+                 
+                 
+                    <td> <button type="button" class="btn btn-warning" (click)="update(dataitem.idnurse)" >Modifier</button></td>
+                      <td>  <button type="button"  id="bb" class="btn btn-danger" (click)="supprimer(dataitem.idnurse)">Supprimer</button>
+                    </td>
+               
+                </tr>
+            </tbody>
+        
+        
+        </table>
+      </div>
+    </div>
+  </div>
+<div class="example-button-row">
+    <button (click)="add()" id="clbbb" mat-raised-button color="primary">Ajouter</button>
+</div>
+
+
+
+
+

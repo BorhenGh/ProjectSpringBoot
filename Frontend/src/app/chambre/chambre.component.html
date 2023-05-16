@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col-md-9">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Liste des chambres</h2>
+        <button mat-raised-button color="primary" (click)="add()">Ajouter une chambre</button>
+      </div>
+      <hr>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID Chambre</th>
+              <th>Nombre de lits</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let chambre of ListRooms">
+              <td>{{ chambre.idchambre }}</td>
+              <td>{{ chambre.nombreDelit }}</td>
+              <td>
+                <button class="btn btn-sm btn-warning" (click)="update(chambre.idchambre)">Modifier</button>
+                <button class="btn btn-sm btn-danger" (click)="supprimer(chambre.idchambre)">Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

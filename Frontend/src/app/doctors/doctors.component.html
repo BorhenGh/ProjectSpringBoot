@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <app-navbar></app-navbar>
+      </div>
+      <div class="col-md-9" >
+        <div class="example-button-row" >
+          
+          <br><br>
+          <button (click)="add()" id="clbbb" mat-raised-button color="primary">Ajouter</button>
+        </div> <br><br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id Doctor</th>
+                    <th>Doctor Name</th>
+                    <th>Consultation fee</th>
+                    <th>Specialty</th>
+                    <th>Grade of the doctor</th>
+                    <th>Hire date</th>
+                    <th>University Name</th>
+              
+                   
+           
+           
+         
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr  *ngFor="let dataitem of Listdoctors  ">
+                    <td id="idresrCh">{{dataitem.idmedecin}}</td>
+                    <td>{{dataitem.nom}}</td>
+                    <td>{{dataitem.prixconsultation}}</td>
+                    <td>{{dataitem.specialite}}</td>
+                    <td>{{dataitem.gradeMedecin}}</td>
+                    <td>{{dataitem.date_embauche|date}}</td>
+                    <td>{{dataitem.nomUniversite}}</td>
+                   
+                    <td><button type="button" class="btn btn-primary" (click)="getCountAppointment(dataitem.idmedecin)" >Appointment</button></td> 
+                 
+                   <td><button type="button" class="btn btn-primary" (click)="getRevenu(dataitem.idmedecin)">Revenu</button></td> 
+                    <td> <button type="button" class="btn btn-warning" (click)="update(dataitem.idmedecin)" >Modifier</button></td>
+                      <td>  <button type="button"  id="bb" class="btn btn-danger" (click)="supprimer(dataitem.idmedecin)">Supprimer</button>
+                    </td>
+               
+                </tr>
+            </tbody>
+        
+        
+        </table>
+      </div>
+    </div>
+  </div>
+<div class="example-button-row">
+    <button (click)="add()" id="clbbb" mat-raised-button color="primary">Ajouter</button>
+</div>
+
+
+
+
+

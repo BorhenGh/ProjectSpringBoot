@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>Add Appointment</h1>
+
+<form [formGroup]="Reactiveform" (ngSubmit)="getReservFormData()">
+
+   
+    <mat-form-field appearance="fill">
+        <mat-label>Patient Id</mat-label>
+        <textarea matInput formControlName="idpatient"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Patient Name </mat-label>
+        <textarea matInput formControlName="nomPatient"></textarea>
+      </mat-form-field>
+        <mat-form-field appearance="fill">
+        <mat-label>Mobile Phone </mat-label>
+        <textarea matInput formControlName="telephone"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>CIN</mat-label>
+        <textarea matInput formControlName="numeroCarte"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>CNSS</mat-label>
+        <textarea matInput formControlName="numeroCnss"></textarea>
+      </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Date of birth</mat-label>
+    <input matInput [matDatepicker]="picker"  formControlName="dateNaissance" >
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+ <mat-form-field appearance="fill">
+        <mat-label>Place of birth</mat-label>
+        <textarea matInput formControlName="lieu_naissance"></textarea>
+      </mat-form-field>
+ 
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Room</mat-label>
+    <mat-select formControlName="chambre" matNativeControl required >
+      <mat-option *ngFor="let room of ListRooms" value={{room.idchambre}}>
+        {{ room.idchambre }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  
+ 
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Fermer</button>
+        <button  type="submit" mat-raised-button color="primary" cdkFocusInitial  *ngIf="editmode==true">Modifier</button>
+      <button  type="submit" mat-raised-button color="primary" cdkFocusInitial *ngIf="editmode==false">Enregistrer</button>
+        
+      </div>
+      
+     
+      
+
+  
+  
+    
+  </form>
+
+

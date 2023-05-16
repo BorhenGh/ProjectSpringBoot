@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col-md-9"><br><br>
+      <div class="d-flex justify-content-center">
+        <button (click)="add()" class="btn btn-primary">Ajouter un patient</button><br><br>
+      </div>
+      <br><br>
+      <div class="card">
+        <div class="card-body">
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Mobile Phone</th>
+                <th>CIN</th>
+                <th>CNSS</th>
+                <th>Date Of Birth</th>
+                <th>Place of Birth</th>
+                <th>Room Number</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let patient of Listpatient">
+                <td>{{ patient.idpatient }}</td>
+                <td>{{ patient.nomPatient }}</td>
+                <td>{{ patient.telephone }}</td>
+                <td>{{ patient.numeroCarte }}</td>
+                <td>{{ patient.numeroCnss }}</td>
+                <td>{{ patient.dateNaissance }}</td>
+                <td>{{ patient.lieu_naissance }}</td>
+                <td>{{ patient.chambre.idchambre }}</td>
+                <td>
+                  <button type="button" class="btn btn-warning" (click)="update(patient.idpatient)">Modifier</button><br><br>
+                  <button type="button" class="btn btn-danger" (click)="supprimer(patient.idpatient)">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

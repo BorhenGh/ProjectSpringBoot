@@ -1,0 +1,107 @@
+.documents-list {
+  margin-top: 50px;
+}
+
+.documents-list h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.document {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.document-info {
+  flex-grow: 1;
+}
+
+.document-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.document-info p {
+  margin-bottom: 5px;
+}
+
+.document-actions button {
+  margin-left: 10px;
+}
+
+.document-actions button.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.document-actions button.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.document-actions button.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.document-actions button.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* CSS pour les boutons avec icônes */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #ebebeb;
+}
+
+.icon-button .icon {
+  margin-right: 5px;
+    
+}
+
+/* Styles spécifiques pour chaque bouton */
+.icon-button.primary {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.icon-button.primary:hover {
+  background-color: #0056b3;
+}
+
+.icon-button.warning {
+  color: #fff;
+  background-color: #ffc107;
+}
+
+.icon-button.warning:hover {
+  background-color: #d39e00;
+}
+
+.icon-button.danger {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.icon-button.danger:hover {
+  background-color: #9b1c2e;
+}

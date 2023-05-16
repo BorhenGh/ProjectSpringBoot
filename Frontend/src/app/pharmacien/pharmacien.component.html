@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <app-navbar></app-navbar>
+      </div>
+      <div class="col-md-9" >
+        <div class="example-button-row" >
+          
+          <br><br>
+          <button (click)="add()" id="clbbb" mat-raised-button color="primary">Ajouter</button>
+        </div> <br><br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id Pharmacist</th>
+                    <th>Pharmacist Name</th>
+                    <th>Age</th>
+                   <th>Mobile Phone</th>
+                    <th>Hire date</th>
+                    <th>Salary</th>
+                    <th>University Name</th>
+              
+                   
+           
+           
+         
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr  *ngFor="let dataitem of Listdoctors  ">
+                    <td id="idresrCh">{{dataitem.id}}</td>
+                    <td>{{dataitem.nomPh}}</td>
+                    <td>{{dataitem.age}}</td>
+                    <td>{{dataitem.telephone}}</td>
+                    <td>{{dataitem.dateRecrutement|date}}</td>
+                    <td>{{dataitem.salaire}}</td>
+                    <td>{{dataitem.nomUniversite}}</td>
+                   
+        
+
+                    <td> <button type="button" class="btn btn-warning" (click)="update(dataitem.id)" >Modifier</button></td>
+                      <td>  <button type="button"  id="bb" class="btn btn-danger" (click)="supprimer(dataitem.id)">Supprimer</button>
+                    </td>
+               
+                </tr>
+            </tbody>
+        
+        
+        </table>
+      </div>
+    </div>
+  </div>
+<div class="example-button-row">
+    <button (click)="add()" id="clbbb" mat-raised-button color="primary">Ajouter</button>
+</div>
+
+
+
+
+

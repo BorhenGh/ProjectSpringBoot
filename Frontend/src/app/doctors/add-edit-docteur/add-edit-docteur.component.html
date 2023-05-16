@@ -1,0 +1,58 @@
+<div class="dialog-container">
+  <h1>Add Doctor</h1>
+
+  <form class="form-container" [formGroup]="Reactiveform" (ngSubmit)="getReservFormData()">
+    <div class="form-field">
+      <label for="idmedecin">Doctor Id</label>
+      <input type="text" id="idmedecin" formControlName="idmedecin" >
+    </div>
+
+    <div class="form-field">
+      <label for="nom">Doctor Name</label>
+      <input type="text" id="nom" formControlName="nom" required>
+    </div>
+
+    <div class="form-field">
+      <label for="prixconsultation">Consultation fee</label>
+      <input type="text" id="prixconsultation" formControlName="prixconsultation" required>
+    </div>
+
+    <div class="form-field">
+      <label for="specialite">Specialty</label>
+      <select id="specialite" formControlName="specialite" required>
+        <option value="Cardiologue">Cardiologue</option>
+        <option value="Gynecologue">Gynecologue</option>
+        <option value="Dermatologue">Dermatologue</option>
+        <option value="Neurologue">Les Neurologue</option>
+        <option value="Psychiatre">Psychiatre</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="gradeMedecin">Grade of the doctor</label>
+      <select id="gradeMedecin" formControlName="gradeMedecin" required>
+        <option value="INTERNE">INTERNE</option>
+        <option value="RESIDENT">RESIDENT</option>
+        <option value="CHEF_DE_CLINIQUE">CHEF_DE_CLINIQUE</option>
+        <option value="PRATICIEN_HOSPITALIER">Les PRATICIEN_HOSPITALIER</option>
+        <option value="PROFESSEUR">PROFESSEUR</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="date_embauche">Hire date</label>
+      <input type="date" id="date_embauche" formControlName="date_embauche" required>
+    </div>
+
+    <div class="form-field">
+      <label for="nomUniversite">University Name</label>
+      <input type="text" id="nomUniversite" formControlName="nomUniversite" required>
+    </div>
+
+    <div class="dialog-actions">
+      <button type="button" class="btn-cancel" (click)="dialogref.close()">Fermer</button>
+      <button type="submit" class="btn-submit" *ngIf="editmode == true">Modifier</button>
+      <button type="submit" class="btn-submit" *ngIf="editmode == false">Enregistrer</button>
+    </div>
+  </form>
+</div>
